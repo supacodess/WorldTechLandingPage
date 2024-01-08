@@ -1,5 +1,7 @@
+'use client';
 import React from 'react'
 import { Playfair_Display, Quattrocento_Sans } from 'next/font/google';
+import { useRouter } from 'next/navigation';
 const primaryFont = Playfair_Display({
     weight: '800',
     subsets: ['latin'],
@@ -9,7 +11,8 @@ const secondaryFont = Quattrocento_Sans({
     subsets: ['latin'],
 })
 
-function ContactUsComponent({ header, content, label }: { header: string, content: string, label: string }) {
+function ContactUsComponent({ header, content, label, href }: { header: string, content: string, label: string, href:string }) {
+    const router = useRouter();
     return (
         <div className='flex px-0 md:px-4 w-[80%] mx-auto flex-col md:flex-row justify-between items-start md:items-center mb-4 mt-2'>
             <div className='flex-1'>
@@ -37,6 +40,7 @@ function ContactUsComponent({ header, content, label }: { header: string, conten
                 flex
                 ${secondaryFont.className}
                 `}
+                onClick={() => router.push(`/${href}`)}
             >
                 {label}
             </button>

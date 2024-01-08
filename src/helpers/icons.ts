@@ -62,14 +62,14 @@ export const whyUsIcons = [
     {
         name: 'Collaborative Environment',
         src: '/icons/collabration.png',
-        content: `Teamwork fuels our success. At <span className={'text-primary text-md}> WorldTech </span>, you'll collaborate with diverse talents, share insights, and contribute to 
-        projects that challenge and inspire. Your voice matters, and your ideas shape our collective success.`
+        content: `Teamwork fuels our success. At WorldTech , you'll collaborate with diverse talents, share insights, and contribute to 
+        projects that challenge and inspire.Your voice matters, and your ideas shape our collective success.`
     },
     {
         name: 'Work-Life Balance',
         src: '/icons/balance.png',
-        content: `We understand the importance of balance. Enjoy a flexible work environment that values your well-being. We believe 
-        that a healthy work-life balance contributes to a more productive and fulfilling career.
+        content: `We understand the importance of balance.Enjoy a flexible work environment that values your well- being.We believe 
+        that a healthy work - life balance contributes to a more productive and fulfilling career.
         `
     }
 ]
