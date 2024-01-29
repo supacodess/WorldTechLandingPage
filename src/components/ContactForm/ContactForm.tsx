@@ -52,9 +52,9 @@ function ContactForm() {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.0674604947103!2d85.43241688257403!3d27.664328077841912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1aabea223d55%3A0x6171d687bb703fec!2sMC8M%2BPC6%2C%20Bhaktapur%2044800!5e0!3m2!1sen!2snp!4v1704625252437!5m2!1sen!2snp"
                     width=""
                     height=""
-                    allowFullScreen=""
+                    // allowFullScreen={undefined}
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    // referrerpolicy="no-referrer-when-downgrade"
                     className='w-full h-[20rem] md:h-full '
                 >
                 </iframe>
