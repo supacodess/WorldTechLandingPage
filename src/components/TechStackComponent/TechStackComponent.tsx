@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
+import Marquee from "react-fast-marquee";
 import { icons } from '@/helpers/icons'
 import { Quattrocento_Sans } from 'next/font/google';
 const secondaryFont = Quattrocento_Sans({
@@ -12,7 +13,7 @@ function TechStackComponent() {
     return (
         <div className='py-6 w-[80%] mx-auto'>
             <div className='flex items-center justify-between'>
-                <marquee>
+                <Marquee>
                     <div className='flex gap-20'>
                         {
                             icons.map((icon, index) => (
@@ -20,7 +21,7 @@ function TechStackComponent() {
                             ))
                         }
                     </div>
-                </marquee>
+                </Marquee>
             </div>
 
         </div>
