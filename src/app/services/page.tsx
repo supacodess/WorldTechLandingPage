@@ -18,9 +18,9 @@ function page() {
       <div className='w-[80%] mx-auto'>
         <h1 className={`${primaryFont.className} font-bold text-5xl text-center`}>Explore Our <span className='text-primary'>Services</span></h1>
         <h1 className={`${secondaryFont.className} font-bold text-2xl text-center mt-6 text-lg`}>
-          Welcome to the <span className={`${primaryFont.className} text-primary text-md`}> WorldTech </span>, where digital dreams come to life. Our range of services is designed to transform
+          Welcome to the <span className={`${primaryFont.className} text-primary text-md`}> WorldTech </span>, {`where digital dreams come to life. Our range of services is designed to transform
           your ideas into innovative, user-friendly, and visually stunning digital experiences. Explore the avenues through
-          which we can elevate your brand in the digital landscape.
+          which we can elevate your brand in the digital landscape.`}
         </h1>
       </div>
       <div className='flex justify-evenly flex-col sm:flex-row my-24'>

@@ -19,8 +19,8 @@ function AboutUsComponent() {
                 <h2 className={`${primaryFont.className} w-[10rem] text-2xl`}>What We <span className='text-primary'>Do!</span></h2>
                 <div className='w-1 bg-primary h-14 mr-4 hidden md:block'></div>
                 <p className={`${secondaryFont.className} md:w-[40rem] mt-6 text-center md:text-start md:mt-0`}>
-                    We're digital storytellers, crafting visually stunning websites & engaging apps
-                    that bring your ideas to life with a touch of innovation & a dash of code magic.
+                    {`We're digital storytellers, crafting visually stunning websites & engaging apps
+                    that bring your ideas to life with a touch of innovation & a dash of code magic.`}
                 </p>
             </div>
 
