@@ -36,7 +36,7 @@ function ServicesCard({ data }: { data: data[] }) {
                                 ' key={index}
                     >
                         <Image
-                            src={icon.src}
+                            src={icon.src!}
                             height={100}
                             width={100}
                             alt={`${icon.name}-icon`}
