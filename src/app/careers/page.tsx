@@ -1,4 +1,5 @@
 "use client";
+import React from 'react';
 import { Playfair_Display, Quattrocento_Sans } from 'next/font/google';
 import ServicesCard from '@/components/Common/ServicesCard/ServicesCard';
 import { whyUsIcons } from '@/helpers/icons';
