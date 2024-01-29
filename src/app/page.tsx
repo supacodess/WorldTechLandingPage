@@ -22,6 +22,7 @@ export default function Home() {
           content="Need a website or app? Let's talk! Send us a message, and we'll help
           you navigate the world of digital possibilities."
           label="Say Hello"
+          href="contact-us"
         />
       </div>
 

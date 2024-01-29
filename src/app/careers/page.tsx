@@ -1,18 +1,21 @@
-import React from 'react'
+"use client";
 import { Playfair_Display, Quattrocento_Sans } from 'next/font/google';
 import ServicesCard from '@/components/Common/ServicesCard/ServicesCard';
 import { whyUsIcons } from '@/helpers/icons';
-import ContactUsComponent from '@/components/ContactUsComponent/ContactUsComponent';
+import { useFetch } from '@/customHooks/useFetch';
+import CareerBox from '@/components/CareerBox/CareerBox';
+
 const primaryFont = Playfair_Display({
     weight: '600',
     subsets: ['latin'],
 })
 const secondaryFont = Quattrocento_Sans({
-    weight: '400',
+    weight: ['400', '700'],
     subsets: ['latin'],
 })
 
 function page() {
+    const { isLoading, error, data } = useFetch('http://www.localhost:9191/api/vacancy')
     return (
         <div className="flex w-[80%] mx-auto h-fit flex-col pt-24 relative text-center">
             <section>
@@ -24,13 +27,11 @@ function page() {
                     exciting work environment.
                 </p>
             </section>
-
             {/* Why WorldTech */}
             <section>
 
                 <div className='flex justify-evenly gap-10 flex-col sm:flex-row my-28'>
                     <h1 className={`${primaryFont.className} text-4xl flex-1 flex gap-2 flex items-center justify-center`}>Why <span className='text-primary'>WorldTech?</span></h1>
-
                     <div className='w-1 bg-primary h-100 mr-4 hidden sm:block'></div>
 
                     <h4 className={`${secondaryFont.className} text-center md:text-start`}>
@@ -46,16 +47,26 @@ function page() {
             {/* Open Position */}
             <section>
                 <h1 className={`${primaryFont.className} text-4xl`}>Current openings </h1>
-                <p className={`${secondaryFont.className} mt-2`}>There are no vacancies available at this time.</p>
+                <div className='flex flex-col gap-6 my-4 mt-6'>
+                    {
+                        isLoading
+                            ? <p> Loading </p>
+                            : (data || []).length >= 1
+                                ? (data || []).map((item: any, index: number) => (
+                                    <CareerBox font={secondaryFont} isLoading={isLoading} item={item} key={index} />
+                                ))
+                                : <p className={`${secondaryFont.className} mt-2`}>There are no vacancies available at this time.</p>
+                    }
+                </div>
             </section>
 
             {/* Email */}
             <section>
-            <p className={`${secondaryFont.className} my-10`}>
-                If you're passionate about what we do and see yourself contributing to our team, 
-                feel free to reach out. Send us your resume and a brief cover letter expressing your 
-                interest and outlining how you believe you can contribute to <span className={`${primaryFont.className} text-primary text-md`}>WorldTech</span>. Send your materials to 
-                <span className={`${primaryFont.className} text-primary text-md`}> info@worldtech.com.np </span>
+                <p className={`${secondaryFont.className} my-10`}>
+                    If you're passionate about what we do and see yourself contributing to our team,
+                    feel free to reach out. Send us your resume and a brief cover letter expressing your
+                    interest and outlining how you believe you can contribute to <span className={`${primaryFont.className} text-primary text-md`}>WorldTech</span>. Send your materials to
+                    <span className={`${primaryFont.className} text-primary text-md`}> info@worldtech.com.np </span>
                 </p>
             </section>
         </div>

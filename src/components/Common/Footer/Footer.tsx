@@ -44,7 +44,7 @@ function Footer() {
             <hr className='my-6' />
             <div className='w-[80%] mx-auto text-sm pb-4 flex items-center justify-between'>
                 <span className={`${secondaryFont.className} text-white`}>
-                    <p>&#169;2024 WorldTech</p>
+                    <p>&#169; {new Date().getFullYear()} WorldTech</p>
                     <p>All rights reserved</p>
                 </span>
                 <p className={`${primaryFont.className} text-[#8c91de]`}>supacodes_</p>
