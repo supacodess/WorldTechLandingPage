@@ -15,7 +15,7 @@ const secondaryFont = Quattrocento_Sans({
     subsets: ['latin'],
 })
 
-function page() {
+function Page() {
     const { isLoading, error, data } = useFetch('http://www.localhost:9191/api/vacancy')
     return (
         <div className="flex w-[80%] mx-auto h-fit flex-col pt-24 relative text-center">
@@ -74,4 +74,4 @@ function page() {
     )
 }
 
-export default page
+export default Page
