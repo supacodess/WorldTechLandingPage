@@ -14,38 +14,37 @@ const optionClass = 'border-2 border-grey rounded-lg w-fit p-2 hover:bg-primary 
 const hoverdOptionClass = "border-2 rounded-lg w-fit p-2 bg-primary text-white border-primary cursor-pointer"
 function ContactForm() {
     const [option, setOption] = useState('Web Design & Development');
-    console.log('option is >> 0', option);
 
     return (
         <div className='flex justify-between flex-col md:flex-row gap-6'>
             <form className='flex flex-col gap-2 flex-1'>
-                    <label className={labelClass}> Your Name</label>
-                    <input type='text' className={inputClass} />
-                    <label className={labelClass}>Your Email</label>
-                    <input type='text' className={inputClass} />
-                    <label className={labelClass}>Select what you would like to inquire about:</label>
-                    <div className='flex gap-4 flex-col md:flex-row md:gap-6'>
-                        {
-                            formOptions.map((formOption, index) => (
-                                <>
-                                    {
-                                        formOption == option
-                                            ? <div className={hoverdOptionClass} onClick={() => setOption(formOption)}>
-                                                <p className={labelClass}> {formOption} </p>
-                                            </div>
-                                            : <div className={optionClass} onClick={() => setOption(formOption)}>
-                                                <p className={labelClass}> {formOption} </p>
-                                            </div>
-                                    }
-                                </>
-                            ))
-                        }
-                    </div>
-                    <label className={labelClass}>Share your message</label>
-                    <textarea id="w3review" name="w3review" rows={4} cols={50} className={inputClass} />
-                    <button className='bg-primary text-white py-4 rounded border-2 border-white hover:border-primary hover:bg-white hover:text-primary duration-300'>
-                        Send Message
-                    </button>
+                <label className={labelClass} htmlFor='name'> Your Name</label>
+                <input type='text' className={inputClass} id='name' />
+                <label className={labelClass} htmlFor='email'>Your Email</label>
+                <input type='text' className={inputClass} id='email' />
+                <label className={labelClass} htmlFor='options'>Select what you would like to inquire about:</label>
+                <div className='flex gap-4 flex-col md:flex-row md:gap-6'>
+                    {
+                        formOptions.map((formOption, index) => (
+                            <React.Fragment key={index}>
+                                {
+                                    formOption == option
+                                        ? <div className={hoverdOptionClass} onClick={() => setOption(formOption)}>
+                                            <p className={labelClass}> {formOption} </p>
+                                        </div>
+                                        : <div className={optionClass} onClick={() => setOption(formOption)}>
+                                            <p className={labelClass}> {formOption} </p>
+                                        </div>
+                                }
+                            </React.Fragment>
+                        ))
+                    }
+                </div>
+                <label className={labelClass} htmlFor='message'>Share your message</label>
+                <textarea id="message" name="message" rows={4} cols={50} className={inputClass} />
+                <button className='bg-primary text-white py-4 rounded border-2 border-white hover:border-primary hover:bg-white hover:text-primary duration-300'>
+                    Send Message
+                </button>
             </form>
             <div className='flex-1'>
                 <iframe
