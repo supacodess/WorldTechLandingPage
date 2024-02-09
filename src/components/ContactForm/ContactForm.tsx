@@ -19,11 +19,11 @@ function ContactForm() {
         <div className='flex justify-between flex-col md:flex-row gap-6'>
             <form className='flex flex-col gap-2 flex-1'>
                 <label className={labelClass} htmlFor='name'> Your Name</label>
-                <input type='text' className={inputClass} id='name' />
+                <input type='text' className={inputClass} id='name' autoComplete='true'/>
                 <label className={labelClass} htmlFor='email'>Your Email</label>
-                <input type='text' className={inputClass} id='email' />
+                <input type='text' className={inputClass} id='email' autoComplete='true'/>
                 <label className={labelClass} htmlFor='options'>Select what you would like to inquire about:</label>
-                <div className='flex gap-4 flex-col md:flex-row md:gap-6'>
+                <div className='flex gap-4 flex-col md:flex-row md:gap-6' id="options">
                     {
                         formOptions.map((formOption, index) => (
                             <React.Fragment key={index}>
@@ -41,7 +41,7 @@ function ContactForm() {
                     }
                 </div>
                 <label className={labelClass} htmlFor='message'>Share your message</label>
-                <textarea id="message" name="message" rows={4} cols={50} className={inputClass} />
+                <textarea id="message" name="message" rows={4} cols={50} className={inputClass} autoComplete='true'/>
                 <button className='bg-primary text-white py-4 rounded border-2 border-white hover:border-primary hover:bg-white hover:text-primary duration-300'>
                     Send Message
                 </button>
