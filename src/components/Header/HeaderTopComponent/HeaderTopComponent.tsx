@@ -2,6 +2,7 @@ import React from 'react';
 import { FaFacebookF, FaLinkedinIn, FaPhone, FaAddressCard } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Playfair_Display, Quattrocento_Sans } from 'next/font/google';
+import Image from 'next/image';
 const primaryFont = Playfair_Display({
     weight: '800',
     subsets: ['latin'],
@@ -15,7 +16,13 @@ function HeaderTopComponent() {
     return (
         <div className='py-8 pb-[2.5rem] shadow-[0_35px_60px_-26px_#9fa0ff] bg-white'>
             <div className='flex justify-center md:justify-between items-center w-[80%] mx-auto'>
-                <h1 className={`${primaryFont.className} text-lg font-bold`}> WorldTech </h1>
+                <Image
+                    src='/logo-blue.png'
+                    height={100}
+                    width={100}
+                    alt='logo'
+                />
+                {/* <h1 className={`${primaryFont.className} text-lg font-bold`}> WorldTech </h1> */}
                 <div className='gap-14  md:flex hidden'>
 
                     {/* Socials */}

@@ -2,6 +2,7 @@ import React from 'react';
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { Playfair_Display, Quattrocento_Sans } from 'next/font/google';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const primaryFont = Playfair_Display({
     weight: '800',
@@ -19,7 +20,13 @@ function Footer() {
         <div className='bg-primary'>
             <div className='flex gap-10 lg:gap-20 w-[80%] mx-auto pt-10 text-white flex-wrap '>
                 <div>
-                    <h1 className={`${primaryFont.className} font-bold text-3xl`}>WorldTech</h1>
+                    <Image
+                        src='/logo.svg'
+                        height={300}
+                        width={300}
+                        alt='logo'
+                        className='mb-4'
+                    />
                     <p className='text-sm mt-2'>Elevate your online presense with our harmonious solutions.</p>
                     <div className='flex gap-2 mt-2'>
                         <FaFacebookF className='bg-secondary h-6 w-6 p-1 text-white' />
