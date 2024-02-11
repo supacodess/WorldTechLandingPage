@@ -10,7 +10,7 @@ export default function Home() {
       <div className='w-[80%] mx-auto'>
         <HeroComponent />
       </div>
-      <div className='bg-primary w-[100%] mt-[-0.9rem]' id='explore'>
+      <div className='bg-primary w-[100%] mt-[-0.5rem]' id='explore'>
         <TechStackComponent />
       </div>
       <div className='w-[80%] mx-auto'>
